@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T12:34:30Z",
+  "generated_at": "2026-11-15T06:30:27Z",
   "host": "nox-server",
   "versoes": {
     "forward": "67d076c7b7e08750",
@@ -9,9 +9,9 @@
     "scanner": "2026-11-14-correcao4"
   },
   "forward_ran": {
-    "ultima_corrida": "2026-11-14T10:54:22Z",
+    "ultima_corrida": "2026-11-15T06:15:27Z",
     "estado": "ok",
-    "origem": "manual",
+    "origem": "systemd",
     "correu_hoje": true
   },
   "forward": {
@@ -54,9 +54,9 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 0.0,
+          "semanas_decorridas": 0.1,
           "semanas_alvo": 8,
-          "progresso_semanas_pct": 0.0,
+          "progresso_semanas_pct": 1.8,
           "trades_alvo_por_setup": 30,
           "criterios_cumpridos": false
         }
@@ -64,8 +64,8 @@
       "B": {
         "setup": "B2",
         "data_inicio": "2026-11-14",
-        "ultimo_dia_processado": null,
-        "dias_processados": 0,
+        "ultimo_dia_processado": "2026-11-14",
+        "dias_processados": 1,
         "capital_inicial": 3000.0,
         "equity": 3000.0,
         "caixa": 3000.0,
@@ -98,9 +98,9 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 0.0,
+          "semanas_decorridas": 0.1,
           "semanas_alvo": 8,
-          "progresso_semanas_pct": 0.0,
+          "progresso_semanas_pct": 1.8,
           "trades_alvo_por_setup": 30,
           "criterios_cumpridos": false
         }
@@ -108,8 +108,8 @@
       "B-short": {
         "setup": "B3",
         "data_inicio": "2026-11-14",
-        "ultimo_dia_processado": null,
-        "dias_processados": 0,
+        "ultimo_dia_processado": "2026-11-14",
+        "dias_processados": 1,
         "capital_inicial": 3000.0,
         "equity": 3000.0,
         "caixa": 3000.0,
@@ -142,9 +142,9 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 0.0,
+          "semanas_decorridas": 0.1,
           "semanas_alvo": 8,
-          "progresso_semanas_pct": 0.0,
+          "progresso_semanas_pct": 1.8,
           "trades_alvo_por_setup": 30,
           "criterios_cumpridos": false
         }
@@ -154,10 +154,10 @@
     "avisos_hoje": 0
   },
   "recolha": {
-    "ultima_corrida": "2026-11-14T05:30:27Z",
-    "fim": "2026-11-14T05:37:36Z",
+    "ultima_corrida": "2026-11-15T05:30:27Z",
+    "fim": "2026-11-15T05:37:37Z",
     "estado": "concluida",
-    "modo": "incremental",
+    "modo": "completo",
     "correu_hoje": true,
     "systemd_resultado": "success",
     "ativos_total": 79,
@@ -172,25 +172,25 @@
     "container_estado": "running",
     "container_saude": "healthy",
     "container_saudavel": true,
-    "tamanho_db_mb": 242.8,
-    "snapshots_24h": 70660,
-    "tokens_vistos": 50434,
-    "tokens_24h": 9743,
-    "quote_budget_esgotado_24h": 8,
+    "tamanho_db_mb": 282.5,
+    "snapshots_24h": 61902,
+    "tokens_vistos": 57177,
+    "tokens_24h": 8213,
+    "quote_budget_esgotado_24h": 99,
     "checkpoints_extra_24h": {
-      "15m": 24,
-      "30m": 16,
-      "2h": 0,
-      "4h": 0
+      "15m": 641,
+      "30m": 637,
+      "2h": 596,
+      "4h": 534
     },
     "checkpoints_extra_saltados_24h": 0,
-    "checkpoints_extra_24h_total": 40
+    "checkpoints_extra_24h_total": 2408
   },
   "backup": {
-    "ultima_linha_em": "2026-11-14T11:19:58Z",
+    "ultima_linha_em": "2026-11-15T02:30:30Z",
     "resultado": "ok",
     "integrity_check_ok": true,
-    "idade_horas": 1.2
+    "idade_horas": 4.0
   },
   "alertas": []
 }
