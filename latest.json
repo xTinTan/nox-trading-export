@@ -1,12 +1,21 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-11-16T06:30:45Z",
+  "schema_version": 2,
+  "generated_at": "2026-11-16T19:24:00Z",
   "host": "nox-server",
   "versoes": {
     "forward": "67d076c7b7e08750",
     "forward_codigo_integro": true,
     "universe": "a5f6aa50cc92b389",
     "scanner": "2026-11-14-correcao4"
+  },
+  "regime": {
+    "data": "2026-11-15",
+    "btc_vs_sma50": "abaixo",
+    "btc_vs_sma200": "abaixo",
+    "var_20d_pct": -18.36,
+    "atr_pct": 4.19,
+    "tendencia": "descida",
+    "volatilidade": "alta"
   },
   "forward_ran": {
     "ultima_corrida": "2026-11-16T06:15:45Z",
@@ -38,6 +47,8 @@
           "drawdown_max_eur": 0.0,
           "drawdown_max_pct": 0.0
         },
+        "trades": [],
+        "sinais": [],
         "hoje": {
           "sinais_gerados": 0,
           "sinais_aceites": 0
@@ -82,6 +93,8 @@
           "drawdown_max_eur": 0.0,
           "drawdown_max_pct": 0.0
         },
+        "trades": [],
+        "sinais": [],
         "hoje": {
           "sinais_gerados": 0,
           "sinais_aceites": 0
@@ -126,6 +139,8 @@
           "drawdown_max_eur": 0.0,
           "drawdown_max_pct": 0.0
         },
+        "trades": [],
+        "sinais": [],
         "hoje": {
           "sinais_gerados": 0,
           "sinais_aceites": 0
@@ -147,6 +162,13 @@
           "progresso_semanas_pct": 3.6,
           "trades_alvo_por_setup": 30,
           "criterios_cumpridos": false
+        },
+        "funding": {
+          "por_posicao": [],
+          "total_eur": 0.0,
+          "total_r": 0.0,
+          "fonte": "hyperliquid",
+          "sem_dados": []
         }
       }
     },
@@ -172,25 +194,25 @@
     "container_estado": "running",
     "container_saude": "healthy",
     "container_saudavel": true,
-    "tamanho_db_mb": 331.9,
-    "snapshots_24h": 63417,
-    "tokens_vistos": 65899,
-    "tokens_24h": 8722,
-    "quote_budget_esgotado_24h": 26,
+    "tamanho_db_mb": 361.9,
+    "snapshots_24h": 69638,
+    "tokens_vistos": 71364,
+    "tokens_24h": 9889,
+    "quote_budget_esgotado_24h": 57,
     "checkpoints_extra_24h": {
-      "15m": 883,
-      "30m": 873,
-      "2h": 864,
-      "4h": 880
+      "15m": 986,
+      "30m": 984,
+      "2h": 932,
+      "4h": 929
     },
     "checkpoints_extra_saltados_24h": 226,
-    "checkpoints_extra_24h_total": 3500
+    "checkpoints_extra_24h_total": 3831
   },
   "backup": {
     "ultima_linha_em": "2026-11-16T02:30:49Z",
     "resultado": "ok",
     "integrity_check_ok": true,
-    "idade_horas": 4.0
+    "idade_horas": 16.9
   },
   "alertas": []
 }
