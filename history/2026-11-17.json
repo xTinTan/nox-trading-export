@@ -1,0 +1,314 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-17T06:30:45Z",
+  "host": "nox-server",
+  "versoes": {
+    "forward": "67d076c7b7e08750",
+    "forward_codigo_integro": true,
+    "universe": "a5f6aa50cc92b389",
+    "scanner": "2026-11-14-correcao4"
+  },
+  "regime": {
+    "data": "2026-11-16",
+    "btc_vs_sma50": "abaixo",
+    "btc_vs_sma200": "abaixo",
+    "var_20d_pct": -19.79,
+    "atr_pct": 4.12,
+    "tendencia": "descida",
+    "volatilidade": "alta"
+  },
+  "forward_ran": {
+    "ultima_corrida": "2026-11-17T06:15:45Z",
+    "estado": "ok",
+    "origem": "systemd",
+    "correu_hoje": true
+  },
+  "forward": {
+    "data_inicio": "2026-11-14",
+    "livros": {
+      "C": {
+        "setup": "C1",
+        "data_inicio": "2026-11-14",
+        "ultimo_dia_processado": "2026-11-16",
+        "dias_processados": 1,
+        "capital_inicial": 5000.0,
+        "equity": 4999.5,
+        "caixa": 4999.5,
+        "pnl_aberto": 0.0,
+        "nocional_aberto": 1000.0,
+        "retorno_pct": -0.01,
+        "posicoes_abertas": [
+          {
+            "ativo": "XLV",
+            "setup": "C1",
+            "direcao": "long",
+            "entrada": 187.88,
+            "stop": 186.66201,
+            "alvo": 190.31598,
+            "data_sinal": "2026-11-16",
+            "data_entrada": "2026-11-16",
+            "regime_entrada": {
+              "data": "2026-11-16",
+              "btc_vs_sma50": "abaixo",
+              "btc_vs_sma200": "abaixo",
+              "var_20d_pct": -19.79,
+              "atr_pct": 4.12,
+              "tendencia": "descida",
+              "volatilidade": "alta"
+            }
+          }
+        ],
+        "trades_fechados": {
+          "n": 0,
+          "r_medio": 0.0,
+          "win_rate_pct": 0.0,
+          "resultado_liquido_eur": 0.0,
+          "custos_eur": 0.0,
+          "drawdown_max_eur": -0.5,
+          "drawdown_max_pct": -0.01
+        },
+        "trades": [],
+        "sinais": [
+          {
+            "data_sinal": "2026-11-16",
+            "ativo": "XLF",
+            "decisao": "rejeitado",
+            "motivo": "limite_diario",
+            "regime_entrada": {
+              "data": "2026-11-16",
+              "btc_vs_sma50": "abaixo",
+              "btc_vs_sma200": "abaixo",
+              "var_20d_pct": -19.79,
+              "atr_pct": 4.12,
+              "tendencia": "descida",
+              "volatilidade": "alta"
+            }
+          },
+          {
+            "data_sinal": "2026-11-16",
+            "ativo": "XLP",
+            "decisao": "rejeitado",
+            "motivo": "limite_diario",
+            "regime_entrada": {
+              "data": "2026-11-16",
+              "btc_vs_sma50": "abaixo",
+              "btc_vs_sma200": "abaixo",
+              "var_20d_pct": -19.79,
+              "atr_pct": 4.12,
+              "tendencia": "descida",
+              "volatilidade": "alta"
+            }
+          },
+          {
+            "data_sinal": "2026-11-16",
+            "ativo": "XLU",
+            "decisao": "rejeitado",
+            "motivo": "limite_diario",
+            "regime_entrada": {
+              "data": "2026-11-16",
+              "btc_vs_sma50": "abaixo",
+              "btc_vs_sma200": "abaixo",
+              "var_20d_pct": -19.79,
+              "atr_pct": 4.12,
+              "tendencia": "descida",
+              "volatilidade": "alta"
+            }
+          },
+          {
+            "data_sinal": "2026-11-16",
+            "ativo": "XLV",
+            "decisao": "aceite",
+            "motivo": null,
+            "regime_entrada": {
+              "data": "2026-11-16",
+              "btc_vs_sma50": "abaixo",
+              "btc_vs_sma200": "abaixo",
+              "var_20d_pct": -19.79,
+              "atr_pct": 4.12,
+              "tendencia": "descida",
+              "volatilidade": "alta"
+            }
+          },
+          {
+            "data_sinal": "2026-11-16",
+            "ativo": "XLY",
+            "decisao": "rejeitado",
+            "motivo": "limite_diario",
+            "regime_entrada": {
+              "data": "2026-11-16",
+              "btc_vs_sma50": "abaixo",
+              "btc_vs_sma200": "abaixo",
+              "var_20d_pct": -19.79,
+              "atr_pct": 4.12,
+              "tendencia": "descida",
+              "volatilidade": "alta"
+            }
+          }
+        ],
+        "hoje": {
+          "sinais_gerados": 5,
+          "sinais_aceites": 1
+        },
+        "desde_corrida_anterior": {
+          "trades_abertos": 1,
+          "trades_fechados": 0
+        },
+        "trades_por_setup": {
+          "C1": {
+            "fechados": 0,
+            "abertos": 1,
+            "progresso_trades_pct": 0.0
+          }
+        },
+        "progresso": {
+          "semanas_decorridas": 0.4,
+          "semanas_alvo": 8,
+          "progresso_semanas_pct": 5.4,
+          "trades_alvo_por_setup": 30,
+          "criterios_cumpridos": false
+        }
+      },
+      "B": {
+        "setup": "B2",
+        "data_inicio": "2026-11-14",
+        "ultimo_dia_processado": "2026-11-16",
+        "dias_processados": 3,
+        "capital_inicial": 3000.0,
+        "equity": 3000.0,
+        "caixa": 3000.0,
+        "pnl_aberto": 0.0,
+        "nocional_aberto": 0.0,
+        "retorno_pct": 0.0,
+        "posicoes_abertas": [],
+        "trades_fechados": {
+          "n": 0,
+          "r_medio": 0.0,
+          "win_rate_pct": 0.0,
+          "resultado_liquido_eur": 0.0,
+          "custos_eur": 0.0,
+          "drawdown_max_eur": 0.0,
+          "drawdown_max_pct": 0.0
+        },
+        "trades": [],
+        "sinais": [],
+        "hoje": {
+          "sinais_gerados": 0,
+          "sinais_aceites": 0
+        },
+        "desde_corrida_anterior": {
+          "trades_abertos": 0,
+          "trades_fechados": 0
+        },
+        "trades_por_setup": {
+          "B2": {
+            "fechados": 0,
+            "abertos": 0,
+            "progresso_trades_pct": 0.0
+          }
+        },
+        "progresso": {
+          "semanas_decorridas": 0.4,
+          "semanas_alvo": 8,
+          "progresso_semanas_pct": 5.4,
+          "trades_alvo_por_setup": 30,
+          "criterios_cumpridos": false
+        }
+      },
+      "B-short": {
+        "setup": "B3",
+        "data_inicio": "2026-11-14",
+        "ultimo_dia_processado": "2026-11-16",
+        "dias_processados": 3,
+        "capital_inicial": 3000.0,
+        "equity": 3000.0,
+        "caixa": 3000.0,
+        "pnl_aberto": 0.0,
+        "nocional_aberto": 0.0,
+        "retorno_pct": 0.0,
+        "posicoes_abertas": [],
+        "trades_fechados": {
+          "n": 0,
+          "r_medio": 0.0,
+          "win_rate_pct": 0.0,
+          "resultado_liquido_eur": 0.0,
+          "custos_eur": 0.0,
+          "drawdown_max_eur": 0.0,
+          "drawdown_max_pct": 0.0
+        },
+        "trades": [],
+        "sinais": [],
+        "hoje": {
+          "sinais_gerados": 0,
+          "sinais_aceites": 0
+        },
+        "desde_corrida_anterior": {
+          "trades_abertos": 0,
+          "trades_fechados": 0
+        },
+        "trades_por_setup": {
+          "B3": {
+            "fechados": 0,
+            "abertos": 0,
+            "progresso_trades_pct": 0.0
+          }
+        },
+        "progresso": {
+          "semanas_decorridas": 0.4,
+          "semanas_alvo": 8,
+          "progresso_semanas_pct": 5.4,
+          "trades_alvo_por_setup": 30,
+          "criterios_cumpridos": false
+        },
+        "funding": {
+          "por_posicao": [],
+          "total_eur": 0.0,
+          "total_r": 0.0,
+          "fonte": "hyperliquid",
+          "sem_dados": []
+        }
+      }
+    },
+    "avisos_total": 0,
+    "avisos_hoje": 0
+  },
+  "recolha": {
+    "ultima_corrida": "2026-11-17T05:30:45Z",
+    "fim": "2026-11-17T05:37:55Z",
+    "estado": "concluida",
+    "modo": "incremental",
+    "correu_hoje": true,
+    "systemd_resultado": "success",
+    "ativos_total": 79,
+    "ativos_com_dados_de_ontem": 79,
+    "ativos_desatualizados": [],
+    "falhas": 0,
+    "ativos_falhados": [],
+    "incompletos": 0,
+    "ok_com_avisos": 10
+  },
+  "scanner": {
+    "container_estado": "running",
+    "container_saude": "healthy",
+    "container_saudavel": true,
+    "tamanho_db_mb": 400.2,
+    "snapshots_24h": 85847,
+    "tokens_vistos": 78130,
+    "tokens_24h": 12232,
+    "quote_budget_esgotado_24h": 186,
+    "checkpoints_extra_24h": {
+      "15m": 1277,
+      "30m": 1280,
+      "2h": 1252,
+      "4h": 1164
+    },
+    "checkpoints_extra_saltados_24h": 40,
+    "checkpoints_extra_24h_total": 4973
+  },
+  "backup": {
+    "ultima_linha_em": "2026-11-17T02:30:49Z",
+    "resultado": "ok",
+    "integrity_check_ok": true,
+    "idade_horas": 4.0
+  },
+  "alertas": []
+}
