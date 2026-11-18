@@ -56,6 +56,27 @@ Também: `forward.avisos_total`, `forward.avisos_hoje` (avisos de dados registad
 
 `regime_entrada` é o objeto `regime` (mesmos campos) do **dia do sinal**, ou seja, da última vela de BTC fechada antes da entrada (sem olhar para o futuro). Fica `null` se não houver dados.
 
+### Forward v2 (desde 17/11/2026): C1 arquivado, C1R e C1R-placebo
+
+Só acrescentos. Nenhum campo existente mudou de nome ou significado.
+
+- `versoes.forward_rotulo`: rótulo da versão do código congelado (`"v2"`).
+- `forward.livros.<livro>.estado`: `"ativo"` ou `"arquivado"`. `forward.livros.C.arquivado_desde` é a primeira vela sem entradas novas do C1. A posição que estava aberta fecha pelas regras do C1.
+- `forward.livros_novos`: tem os livros `C1R` (C1-ATR alargado: 20 ETFs + 130 ações, filtro SPY acima da SMA200, stop 1,5×ATR14, alvo 2R, risco de 1% do capital da Conta C) e `C1R-placebo` (sombra: mesmas regras, entradas sorteadas, capital fictício que não conta para a Conta C).
+  - Têm os mesmos campos de um livro de `forward.livros`, com uma exceção: `sinais_ultimo_dia` (só os sinais do último dia processado) substitui a lista `sinais` completa.
+  - Campos extra: `estado` (`ativo`/`parado_drawdown`), `sombra` (bool), `seed` (no placebo; `null` no C1R) e `universo_n`.
+  - Em `progresso`: `semanas_alvo` e `progresso_semanas_pct` ficam `null`, e `criterios_cumpridos` é ter 30 trades fechados.
+- `forward.conta_c`: Conta C combinada (capital inicial + P&L do C1 + P&L do C1R).
+  - Campos: `capital_inicial`, `caixa`, `equity`, `pnl_c1`, `pnl_c1r`, `nocional_aberto`.
+  - `drawdown_pct`: maior queda em % desde 17/11, com pico inicial no capital de 16/11.
+  - `drawdown_limite_pct`: 15.
+  - `paragem`: `true` quando o drawdown passou o limite e o C1R e o placebo deixaram de abrir posições.
+- `forward.filtro_regime_spy`: `data`, `spy_fecho`, `spy_sma200`, `acima` (o C1R só abre posições novas com `acima: true`).
+- `forward.avaliacao_c1r`: avaliação pré-registada ao fim de 30 trades fechados do C1R.
+  - Campos: `trades_fechados`, `trades_alvo` (30), `pronta`, `data_avaliacao`, `r_medio`, `ic90_lo`, `ic90_hi` (bootstrap por dia de entrada), `r_medio_placebo`, `retorno_c1r_pct`, `retorno_spy_pct` (comprar e manter SPY desde 17/11).
+  - `passa` fica `null` até haver 30 trades. Depois é `true` só se o IC 90% estiver acima de 0, o R médio for maior que o do placebo e o retorno for ≥ ao do SPY.
+- Alertas novos: `C1R: paragem por drawdown (Conta C acima de 15%)`, `C1R: avaliacao pronta (30 trades fechados)`, `filtro SPY indisponivel`, `forward v2: erro em <secção>`.
+
 ### `forward.livros["B-short"].funding` — funding real (Hyperliquid)
 
 Só observação: o livro continua a usar a sua suposição fixa de funding; isto mede o que um short perpétuo teria realmente recebido ou pago.
