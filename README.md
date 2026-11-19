@@ -77,6 +77,16 @@ Só acrescentos. Nenhum campo existente mudou de nome ou significado.
   - `passa` fica `null` até haver 30 trades. Depois é `true` só se o IC 90% estiver acima de 0, o R médio for maior que o do placebo e o retorno for ≥ ao do SPY.
 - Alertas novos: `C1R: paragem por drawdown (Conta C acima de 15%)`, `C1R: avaliacao pronta (30 trades fechados)`, `filtro SPY indisponivel`, `forward v2: erro em <secção>`.
 
+### `a_aguardar` (desde 18/11/2026)
+
+Só acréscimo. Cada livro de `forward.livros` e de `forward.livros_novos` tem `a_aguardar`:
+
+- `null`: o motor não ficou à espera de nada na última corrida.
+- `{"data", "faltam", "corrida_forward"}`: o motor não processou `data` porque faltam velas de `faltam` (lista de símbolos). Espera até haver velas 2 dias mais recentes e depois processa sem esses ativos. `corrida_forward` é a hora UTC da corrida do forward que o registou.
+- `{"erro": "<tipo>"}`: não foi possível ler o log do forward.
+
+Explica, por exemplo, um livro com `dias_processados` a 0 ou um `ultimo_dia_processado` atrasado.
+
 ### `forward.livros["B-short"].funding` — funding real (Hyperliquid)
 
 Só observação: o livro continua a usar a sua suposição fixa de funding; isto mede o que um short perpétuo teria realmente recebido ou pago.
