@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-21T06:30:01Z",
+  "generated_at": "2026-11-22T06:30:01Z",
   "host": "nox-server",
   "versoes": {
     "forward": "8af8a3dc0641ec70",
@@ -10,16 +10,16 @@
     "forward_rotulo": "v2"
   },
   "regime": {
-    "data": "2026-11-20",
+    "data": "2026-11-21",
     "btc_vs_sma50": "abaixo",
     "btc_vs_sma200": "abaixo",
-    "var_20d_pct": -24.06,
-    "atr_pct": 4.78,
+    "var_20d_pct": -23.2,
+    "atr_pct": 5.03,
     "tendencia": "descida",
     "volatilidade": "alta"
   },
   "forward_ran": {
-    "ultima_corrida": "2026-11-21T06:15:01Z",
+    "ultima_corrida": "2026-11-22T06:15:01Z",
     "estado": "ok",
     "origem": "systemd",
     "correu_hoje": true
@@ -164,9 +164,9 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 1.0,
+          "semanas_decorridas": 1.1,
           "semanas_alvo": 8,
-          "progresso_semanas_pct": 12.5,
+          "progresso_semanas_pct": 14.3,
           "trades_alvo_por_setup": 30,
           "criterios_cumpridos": false
         },
@@ -177,8 +177,8 @@
       "B": {
         "setup": "B2",
         "data_inicio": "2026-11-14",
-        "ultimo_dia_processado": "2026-11-20",
-        "dias_processados": 7,
+        "ultimo_dia_processado": "2026-11-21",
+        "dias_processados": 8,
         "capital_inicial": 3000.0,
         "equity": 3000.0,
         "caixa": 3000.0,
@@ -213,9 +213,9 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 1.0,
+          "semanas_decorridas": 1.1,
           "semanas_alvo": 8,
-          "progresso_semanas_pct": 12.5,
+          "progresso_semanas_pct": 14.3,
           "trades_alvo_por_setup": 30,
           "criterios_cumpridos": false
         },
@@ -225,8 +225,8 @@
       "B-short": {
         "setup": "B3",
         "data_inicio": "2026-11-14",
-        "ultimo_dia_processado": "2026-11-20",
-        "dias_processados": 7,
+        "ultimo_dia_processado": "2026-11-21",
+        "dias_processados": 8,
         "capital_inicial": 3000.0,
         "equity": 3000.0,
         "caixa": 3000.0,
@@ -261,9 +261,9 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 1.0,
+          "semanas_decorridas": 1.1,
           "semanas_alvo": 8,
-          "progresso_semanas_pct": 12.5,
+          "progresso_semanas_pct": 14.3,
           "trades_alvo_por_setup": 30,
           "criterios_cumpridos": false
         },
@@ -343,7 +343,7 @@
         },
         "desde_corrida_anterior": {
           "trades_abertos": 0,
-          "trades_fechados": 1
+          "trades_fechados": 0
         },
         "trades_por_setup": {
           "C1R": {
@@ -353,7 +353,7 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 0.6,
+          "semanas_decorridas": 0.7,
           "semanas_alvo": null,
           "progresso_semanas_pct": null,
           "trades_alvo_por_setup": 30,
@@ -789,7 +789,7 @@
         },
         "desde_corrida_anterior": {
           "trades_abertos": 0,
-          "trades_fechados": 1
+          "trades_fechados": 0
         },
         "trades_por_setup": {
           "C1R-placebo": {
@@ -799,7 +799,7 @@
           }
         },
         "progresso": {
-          "semanas_decorridas": 0.6,
+          "semanas_decorridas": 0.7,
           "semanas_alvo": null,
           "progresso_semanas_pct": null,
           "trades_alvo_por_setup": 30,
@@ -864,10 +864,10 @@
     }
   },
   "recolha": {
-    "ultima_corrida": "2026-11-21T05:30:01Z",
-    "fim": "2026-11-21T05:50:36Z",
+    "ultima_corrida": "2026-11-22T05:30:01Z",
+    "fim": "2026-11-22T05:50:38Z",
     "estado": "concluida",
-    "modo": "incremental",
+    "modo": "completo",
     "correu_hoje": true,
     "systemd_resultado": "success",
     "ativos_total": 179,
@@ -875,29 +875,29 @@
     "ativos_desatualizados": [],
     "falhas": 0,
     "ativos_falhados": [],
-    "incompletos": 1,
+    "incompletos": 0,
     "ok_com_avisos": 10
   },
   "scanner": {
     "container_estado": "running",
     "container_saude": "healthy",
     "container_saudavel": true,
-    "tamanho_db_mb": 681.2,
-    "snapshots_24h": 123713,
-    "tokens_vistos": 128401,
-    "tokens_24h": 18062,
-    "quote_budget_esgotado_24h": 1029,
+    "tamanho_db_mb": 728.5,
+    "snapshots_24h": 65937,
+    "tokens_vistos": 135825,
+    "tokens_24h": 7424,
+    "quote_budget_esgotado_24h": 290,
     "checkpoints_extra_24h": {
-      "15m": 1488,
-      "30m": 1489,
-      "2h": 1499,
-      "4h": 1531
+      "15m": 840,
+      "30m": 831,
+      "2h": 823,
+      "4h": 811
     },
-    "checkpoints_extra_saltados_24h": 2534,
-    "checkpoints_extra_24h_total": 6007
+    "checkpoints_extra_saltados_24h": 0,
+    "checkpoints_extra_24h_total": 3305
   },
   "backup": {
-    "ultima_linha_em": "2026-11-21T02:30:09Z",
+    "ultima_linha_em": "2026-11-22T02:30:09Z",
     "resultado": "ok",
     "integrity_check_ok": true,
     "idade_horas": 4.0
