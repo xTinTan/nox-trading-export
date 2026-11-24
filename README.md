@@ -77,6 +77,21 @@ Só acrescentos. Nenhum campo existente mudou de nome ou significado.
   - `passa` fica `null` até haver 30 trades. Depois é `true` só se o IC 90% estiver acima de 0, o R médio for maior que o do placebo e o retorno for ≥ ao do SPY.
 - Alertas novos: `C1R: paragem por drawdown (Conta C acima de 15%)`, `C1R: avaliacao pronta (30 trades fechados)`, `filtro SPY indisponivel`, `forward v2: erro em <secção>`.
 
+### Forward v3 (desde 24/11/2026): C1R e C1R-placebo entram à abertura de D+1
+
+Só acrescentos. Nenhum campo existente mudou de nome ou significado.
+
+- `versoes.forward_rotulo` passa a `"v3"`.
+- Os sinais de D ≥ 2026-11-23 entram à abertura de D+1. O stop é abertura − 1,5×ATR14(D) e o alvo 2R. Não há entrada se a abertura já estiver abaixo do stop calculado com o fecho de D.
+  - As posições abertas na v2 fecham pelas regras com que abriram.
+- `forward.livros_novos.<livro>.entrada`: `"abertura_D1"` (v3) ou `"fecho_D"`.
+- `forward.livros_novos.<livro>.entrada_abertura_desde_sinal`: primeiro dia de sinal com entrada à abertura.
+- Em cada elemento de `trades` e `posicoes_abertas`, de todos os livros:
+  - `versao`: rótulo da versão do forward com que o trade abriu (`"v1"`, `"v2"`, `"v3"`);
+  - `versao_id`: o id dessa versão.
+- `forward.avaliacao_c1r` conta os trades do C1R das duas versões (v2 e v3), como no pré-registo v3.
+- Na tabela de sinais, um candidato que não entra pela regra da abertura aparece como `rejeitado`, com motivo `abertura_abaixo_stop` ou `sem_d1` (sem vela do ativo na sessão seguinte).
+
 ### `a_aguardar` (desde 18/11/2026)
 
 Só acréscimo. Cada livro de `forward.livros` e de `forward.livros_novos` tem `a_aguardar`:
@@ -139,12 +154,14 @@ Com histórico insuficiente (menos de 200 velas para as médias, 264 para a vola
 
 ### `scanner` — recolha de lançamentos de tokens
 
-`container_estado`, `container_saude`, `container_saudavel`, `tamanho_db_mb`, `snapshots_24h`, `tokens_vistos` (total), `tokens_24h`, `quote_budget_esgotado_24h` (snapshots sem preço USD por orçamento de consultas esgotado), `checkpoints_extra_24h` (`15m`, `30m`, `2h`, `4h`), `checkpoints_extra_24h_total`, `checkpoints_extra_saltados_24h`. Nunca inclui endereços de tokens.
+`estado` (`ativo`/`pausado`), `pausado_desde` (data, ou `null`), `motivo_pausa`, `container_estado`, `container_saude`, `container_saudavel`, `tamanho_db_mb`, `snapshots_24h`, `tokens_vistos` (total), `tokens_24h`, `quote_budget_esgotado_24h` (snapshots sem preço USD por orçamento de consultas esgotado), `checkpoints_extra_24h` (`15m`, `30m`, `2h`, `4h`), `checkpoints_extra_24h_total`, `checkpoints_extra_saltados_24h`. Nunca inclui endereços de tokens.
+
+Com `estado = "pausado"` (pausa decidida, desde 2026-11-23: as hipóteses pré-registadas não passaram) a recolha está parada de propósito: os contadores ficam a `null`/`0`, `versoes.scanner` mostra a última versão que correu e não há alertas do scanner.
 
 ### `backup`
 
-`ultima_linha_em`, `resultado` (`ok`/`falha`), `integrity_check_ok`, `idade_horas` da última linha do log de backup da base do scanner.
+`estado` (`ativo`/`pausado`), `pausado_desde`, `ultima_linha_em`, `resultado` (`ok`/`falha`), `integrity_check_ok`, `idade_horas` da última linha do log de backup da base do scanner. Com o scanner pausado, o backup próprio dele também está desativado: os valores são só informativos e não geram alertas.
 
 ## Alertas (regras)
 
-forward não correu hoje · forward falhou/recusou · código forward alterado · recolha não correu hoje · N ativos sem dados · N ativos falhados · container não saudável · scanner sem snapshots em 24 h · último backup falhou / sem integrity_check · backup com mais de 26 h · avisos novos no forward · regime: dados de BTC indisponíveis · funding B-short: API Hyperliquid indisponível / erro a calcular / sem dados para <símbolos>.
+forward não correu hoje · forward falhou/recusou · código forward alterado · recolha não correu hoje · N ativos sem dados · N ativos falhados · container não saudável · scanner sem snapshots em 24 h · último backup falhou / sem integrity_check · backup com mais de 26 h (estes alertas do scanner e do backup não se aplicam com `scanner.estado = "pausado"`) · avisos novos no forward · regime: dados de BTC indisponíveis · funding B-short: API Hyperliquid indisponível / erro a calcular / sem dados para <símbolos>.
